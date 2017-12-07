@@ -1,15 +1,20 @@
 create-react-app增加hot-react-loader热更新配置
 
 目标:
-react+Typescript+Redux 实现慕课饿了么课程效果
+react+Redux 实现慕课饿了么课程效果
 
-###npm install
+本打算用ts,
+
+//create-react-app my-app --scripts-version=react-scripts-ts
+这行命令能生成ts的项目模版,可是要配置热更新也很烦
+
+npm install
 安装
-###npm start or yarn start 
+npm start or yarn start 
 运行
 
 
-###12-7日添加
+12-7日添加
 文档功能 jsdoc -c doc.json 生成文档
 
 [官方文档](http://www.css88.com/doc/jsdoc/)
