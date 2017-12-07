@@ -3,10 +3,6 @@ create-react-app增加hot-react-loader热更新配置
 目标:
 react+Redux 实现慕课饿了么课程效果
 
-本打算用ts,
-
-//create-react-app my-app --scripts-version=react-scripts-ts
-这行命令能生成ts的项目模版,可是要配置热更新也很烦
 
 npm install
 安装
