@@ -1,0 +1,37 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc","closure"]
+  },
+  "source": {
+    //生成文档要包含的文件
+    "include": [ "src"],
+    "includePattern": ".+\\.js(doc)?$",
+    "excludePattern": "(node_modules/|docs)"
+  },
+
+  "opts": {
+    //theme模板， same as -t templates/default
+    //"template": "templates/default",
+    "template": "node_modules/minami",
+
+    "encoding": "utf8",
+    // same as -e utf8
+
+    //输出目录， same as -d ./out/
+    "destination": "./docs/",
+
+    //是否显示私有方法
+    "private": false,
+    "recurse": true
+    // same as -r
+    //"tutorials": "./docs/tutorials"  // same as -u path/to/tutorials
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": true
+  }
+}
