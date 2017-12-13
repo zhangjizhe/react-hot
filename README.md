@@ -19,3 +19,10 @@ npm start or yarn start
 
 [readme.md学习](https://github.com/guodongxiaren/README#readme)
 
+
+let t = "http://static.facetool.cn/U/6e60d7e5bb0fc7975364d1ad8632efe7.jpg"
+		t = window.btoa(t)
+		console.log(t,window.atob(t))
+    js自带的base64方法
+    
+router实现,window的hashchange事件
