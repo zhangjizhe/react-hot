@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'whatwg-fetch'
+import {getRatings,getGoods,getSeller} from './data'
+import { createStore } from 'redux';
+import Counter from './components/Counter'
+import counter from './reducers'
+let log = console.log.bind(this)
+const store = createStore(counter)
+
 
 class App extends Component {
     constructor(prop){
@@ -9,7 +17,9 @@ class App extends Component {
           num :0
       }
     }
+    fetch(){
 
+    }
     addTime(){
         let temp = 0
         setInterval(() => {
@@ -21,7 +31,8 @@ class App extends Component {
     }
 
     componentDidMount(){
-        this.addTime()
+      this.addTime()
+      this.fetch()
     }
 
   render() {
@@ -35,6 +46,12 @@ class App extends Component {
 
         </p>
           <p>{this.state.num}</p>
+
+        <Counter
+          value={store.getState()}
+          onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
+          onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
+        />
       </div>
     );
   }
