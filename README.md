@@ -26,3 +26,6 @@ let t = "http://static.facetool.cn/U/6e60d7e5bb0fc7975364d1ad8632efe7.jpg"
     js自带的base64方法
     
 router实现,window的hashchange事件
+
+
+按照阮一峰大神教程开始学习redux，antd-pro也走了一遍，感觉很爽，可以参考文件结构
