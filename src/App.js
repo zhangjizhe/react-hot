@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'whatwg-fetch'
+import  {log} from './until'
 import {getRatings,getGoods,getSeller} from './data'
 import { createStore } from 'redux';
 import Counter from './components/Counter'
 import counter from './reducers'
-let log = console.log.bind(this)
+
 const store = createStore(counter)
 
 
@@ -17,9 +18,11 @@ class App extends Component {
           num :0
       }
     }
-    fetch(){
 
+    fetch(){
+      this.asyncPrint('hello world', 1150);
     }
+
     addTime(){
         let temp = 0
         setInterval(() => {
@@ -30,12 +33,23 @@ class App extends Component {
         },500)
     }
 
-    componentDidMount(){
+   timeout(ms) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+      });
+    }
+    async  asyncPrint(value, ms) {
+      await this.timeout(ms);
+      console.log(value)
+    }
+
+
+  componentDidMount(){
       this.addTime()
       this.fetch()
     }
 
-  render() {
+  render(){
     return (
       <div className="App">
         <header className="App-header">
